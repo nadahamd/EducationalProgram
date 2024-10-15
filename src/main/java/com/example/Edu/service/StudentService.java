@@ -19,7 +19,7 @@ public class StudentService extends GenericService<StudentsDao, Students,Integer
         return dao.getByMark(mark);
     }
 
-    public List<SubjectDto> getSubjectsForStudent(Integer studentId) {
+    public List<String> getSubjectsForStudent(Integer studentId) {
         return dao.getSubjectsForStudent(studentId);
     }
 }

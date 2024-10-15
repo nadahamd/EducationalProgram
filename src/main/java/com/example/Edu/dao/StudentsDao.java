@@ -26,5 +26,5 @@ public interface StudentsDao extends GenericDao<Students,Integer> {
     @Query(value = "select distinct s.Name as name from Subject as s " +
             "left join Details as d on d.Subject_Id=s.id " +
             "where d.Student_Id=:studentId",nativeQuery = true)
-    List<SubjectDto> getSubjectsForStudent(@Param("studentId") Integer studentId);
+    List<String> getSubjectsForStudent(@Param("studentId") Integer studentId);
 }

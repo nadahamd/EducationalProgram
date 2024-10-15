@@ -23,7 +23,7 @@ public class StudentController extends GenericController<StudentService, Student
 
 }
 @GetMapping("/get-subjects")
-    public List<SubjectDto> getSubjectsForStudent(@RequestParam("studentId") Integer studentId){
+    public List<String> getSubjectsForStudent(@RequestParam("studentId") Integer studentId){
         return  service.getSubjectsForStudent(studentId);
 }
 
